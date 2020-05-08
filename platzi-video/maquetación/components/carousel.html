@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+    <title>Carrousel 1</title>
+</head>
+<style>
+    body {
+        margin: 0px;
+        font-family: 'Muli', sans-serif;
+    }
+    .carousel {
+        width: 100%;
+        overflow: scroll;
+        margin: 30px;
+        position: relative;
+    }
+    .carousel__container {
+        white-space: nowrap;    /* hace la magia del carousel */
+        margin: 70px 0px;       /*NO  USAR COMAS*/
+        padding-bottom: 10px;
+    }
+    .carousel__container-item {
+        background-color: yellowgreen;
+        width: 200px;
+        height: 250px;
+        border-radius: 20px;
+        overflow: hidden;
+        margin-right: 10px;
+        display: inline-block;
+        cursor: pointer;
+        transition: 450ms all;
+        transform-origin: center left; 
+        position: relative;      
+    }
+    .carousel__container-item:hover ~ .carousel__container-item {     /*virgulilla para que funcione tambien cuando no tiene el hover*/
+        transform: translate3d(100px, 0, 0);
+    }
+    .carousel__container:hover .carousel__container-item {  /*opaco los demás cuando activo el hover sobre un foto*/
+        opacity: 0.3;
+    }
+    .carousel__container:hover .carousel__container-item:hover {/*agrando el item hovereado*/
+        transform: scale(1.5);
+        opacity: 1;
+    }
+    .carousel__container-item__img{
+        width: 200px;
+        height: 250px;
+        object-fit: cover;
+    }
+    .carousel__container-item__details{
+        background: linear-gradient(to top, rgba 0, 0, 0, 0.9)0%, rgba(0, 0, 0, 0)100%;
+        font-size: 10px;
+        color: white;
+        opacity: 0;
+        transition: 450ms opacity;
+        padding: 10px;
+        position: absolute;
+        top: 180px;                 /*ATENTO*/
+        right: 0;
+        left: 0;
+        bottom: 0;
+    }
+    .carousel__container-item:hover .carousel__container-item__details{
+        opacity: 1;
+    }
+    .carousel__container-item__details__img{
+        height: 20px;
+        width: 20px;
+        margin: 0px;
+    }
+    .carousel__container-item__details--title{
+        margin: 0px;
+        padding: 0px;
+    }
+    .carousel__container-item__details--subtitle{
+        margin: 0px;
+        padding: 0px;
+    }
+
+
+</style>
+<body>
+    <section class="carousel">
+        <div class="carousel__container">
+            <div class="carousel__container-item">
+                <img class="carousel__container-item__img" src="../../images/CAT1.JPG" alt="cats">
+                <div class="carousel__container-item__details"> <!-- /*los botoncitos de las imagenes*/ -->
+                    <div>
+                        <img class="carousel__container-item__details__img" src="../../images/play.png" alt="play">
+                        <img class="carousel__container-item__details__img" src="https://img.icons8.com/nolan/64/plus.png" alt="add">                    
+                    </div>       
+                    <p class="carousel__container-item__details--title">Gats</p>
+                    <p class="carousel__container-item__details--subtitle">2019 16+ 114'</p>
+                </div>
+            </div>
+            <div class="carousel__container-item">
+                <img class="carousel__container-item__img" src="../../images/CAT2.JPG" alt="cats">
+                <div class="carousel__container-item__details"> <!-- /*los botoncitos de las imagenes*/ -->
+                    <div>
+                        <img class="carousel__container-item__details__img" src="../../images/play.png" alt="play">
+                        <img class="carousel__container-item__details__img" src="https://img.icons8.com/nolan/64/plus.png" alt="add">                    
+                    </div>       
+                    <p class="carousel__container-item__details--title">Gats</p>
+                    <p class="carousel__container-item__details--subtitle">2019 16+ 114'</p>
+                </div>
+            </div>
+            <div class="carousel__container-item">
+                <img class="carousel__container-item__img" src="../../images/CAT3.JPG" alt="cats">
+                <div class="carousel__container-item__details"> <!-- /*los botoncitos de las imagenes*/ -->
+                    <div>
+                        <img class="carousel__container-item__details__img" src="../../images/play.png" alt="play">
+                        <img class="carousel__container-item__details__img" src="https://img.icons8.com/nolan/64/plus.png" alt="add">                    
+                    </div>       
+                    <p class="carousel__container-item__details--title">Gats</p>
+                    <p class="carousel__container-item__details--subtitle">2019 16+ 114'</p>
+                </div>
+            </div>
+            <div class="carousel__container-item">
+                <img class="carousel__container-item__img" src="../../images/CAT4.JPG" alt="cats">
+                <div class="carousel__container-item__details"> <!-- /*los botoncitos de las imagenes*/ -->
+                    <div>
+                        <img class="carousel__container-item__details__img" src="../../images/play.png" alt="play">
+                        <img class="carousel__container-item__details__img" src="https://img.icons8.com/nolan/64/plus.png" alt="add">                    
+                    </div>       
+                    <p class="carousel__container-item__details--title">Gats</p>
+                    <p class="carousel__container-item__details--subtitle">2019 16+ 114'</p>
+                </div>
+            </div>
+            <div class="carousel__container-item">
+                <img class="carousel__container-item__img" src="../../images/CAT5.JPG" alt="cats">
+                <div class="carousel__container-item__details"> <!-- /*los botoncitos de las imagenes*/ -->
+                    <div>
+                        <img class="carousel__container-item__details__img" src="../../images/play.png" alt="play">
+                        <img class="carousel__container-item__details__img" src="https://img.icons8.com/nolan/64/plus.png" alt="add">                    
+                    </div>       
+                    <p class="carousel__container-item__details--title">Gats</p>
+                    <p class="carousel__container-item__details--subtitle">2019 16+ 114'</p>
+                </div>
+            </div>
+            <div class="carousel__container-item">
+                <img class="carousel__container-item__img" src="../../images/CAT6.JPG" alt="cats">
+                <div class="carousel__container-item__details"> <!-- /*los botoncitos de las imagenes*/ -->
+                    <div>
+                        <img class="carousel__container-item__details__img" src="../../images/play.png" alt="play">
+                        <img class="carousel__container-item__details__img" src="https://img.icons8.com/nolan/64/plus.png" alt="add">                    
+                    </div>       
+                    <p class="carousel__container-item__details--title">Gats</p>
+                    <p class="carousel__container-item__details--subtitle">2019 16+ 114'</p>
+                </div>
+            </div>
+            <div class="carousel__container-item">
+            </div>
+        </div>
+    </section>
+</body>
+</html>
